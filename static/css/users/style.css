@@ -1,0 +1,50 @@
+.user_img{
+    max-height: 200px;
+    max-width: 200px;
+    border: 4px solid lightblue;
+    border-radius: 150px;
+}
+
+.bg-img{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container{
+    text-align: center;
+}
+.container a{
+    opacity: .3;
+    text-decoration: none;
+}
+
+#username{
+    opacity: .5;
+    font-size: 1.1em;
+}
+
+#phone{
+    opacity: .5;
+    margin-top: -1em;
+}
+
+#bio{
+    /* border: 1px solid black; */
+    max-height: 10em;
+    overflow: hidden;
+    padding: 2.1em;
+}
+
+.details{
+    position: relative;
+}
+
+
+.card {
+    border: 3px solid lightblue;
+}
+
+.card-body{
+    margin-top: -3em;
+}
+

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/users/style.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+        {% block body %}
+        <br>
+        <center><h1>My profile</h1></center>
+                <small><a href="/">Go back</a></small>
+
+        <div class="card" style="margin-top: 3em;">
+            <a href="/auth/edit" style="margin: 1.5em 2em 0em 0em; text-align: right">Edit</a>
+
+            <div class="card-body">
+
+
+                <div class="bg-img">
+                    <img src="{{ user.image.url }}" class="user_img" alt="">
+                </div>
+                <div class="details">
+                    <h2 id="full_name">{{user.first_name}} {{user.second_name}}</h2>
+                    <p id="username">@{{user.username}}</p><p id="phone">{{user.phone_number}}</p>
+                    <div id="bio">
+                        <p>{{user.bio}}</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    
+
+
+</body>
+</html>

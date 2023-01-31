@@ -1,0 +1,105 @@
+{% extends 'users/profile.html' %}
+
+
+{% block body %}
+
+
+
+
+<br>
+<center><h1>Edit profile</h1></center>
+        <small><a href="/">Go back</a></small>
+
+<div class="card" style="margin-top: 3em;">
+
+    <div class="card-body">
+        <form enctype="multipart/form-data" method="post">{% csrf_token %}
+
+            <div class="bg-img">
+                <img src="{{ user.image.url }}" class="user_img" alt=""><br>
+                <label class="file-upload">
+                    <input type="file" name="image" value="{{user.img}}" id="fileToUpload">
+                    Change profile photo
+                  </label>
+            </div>
+    
+            <div class="details">
+                <input name="first_name" type="text" value="{{user.first_name}}" style="margin-left: 3.5em;">
+                <input name="second_name" type="text" value="{{user.second_name}}">
+                <br>
+                <input class="username" name="username" type="text" value="{{user.username}}">
+                <input class="phone_number" name="phone_number" type="text" value="{{user.phone_number}}">
+    
+                <div id="bio">
+                    <input name="bio" type="text" value="{{user.bio}}">
+                </div>    
+            </div>    
+            <button class="btn btn-primary" type="submit" style="padding: 0.5em 4em 0.5em 4em;">Save</button>
+        </form>
+
+    </div>
+</div>
+
+
+
+<style>
+    .card-body{
+        margin: 0em;
+    }
+
+    .inputfile{
+        overflow: hidden;
+        width: 6em;
+    }
+
+    .file-upload {
+        margin-top: 0.5em;
+        border: 1px solid rgb(209, 209, 209);
+        border-radius: 10px;
+        padding: 4px;
+        padding-right: 7px;
+    }
+      
+    .file-upload input {
+        overflow: hidden;
+        width: 0;
+    }
+    .file-upload input:focus {
+        border: none;
+    }
+    .file-upload:hover{
+        cursor: pointer;
+    }
+
+    #full_name input{
+      border: 1px solid rgb(197, 194, 194);  
+      border-right: none;
+    }
+    input{
+        border: white;
+        transition: 0.6s;
+    }
+    input:focus{
+        border: 1px solid rgb(197, 195, 195);
+        border-radius: 3px;
+        outline: none;
+    }
+    .username{
+        opacity: .4;
+        margin-left: 3.5em;
+    }
+    .phone_number{
+        opacity: .4;
+    }
+
+      
+    
+    
+</style>
+
+
+
+
+
+
+{% endblock %}
