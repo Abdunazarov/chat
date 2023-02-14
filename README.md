@@ -9,7 +9,7 @@ pip install django-channels
 ```
 
 ## Walkthrough
-Register a user in order to start using the app. A user has to add contacts (add existing users to contact list) in `Add contacts` section. You can search for the user you are looking or choose any random user shown below.
+Register a user in order to start using the app. A user has to add contacts (add existing users to contact list) in `Add contacts` section. You can search for the user you are looking for or choose any random user shown below.
 You can start conversation right after clicking to a user, which are automatically added to your contact list and can be found under `You contacts`.
 
 
